@@ -1,0 +1,46 @@
+name: Build and Release Marp Presentation
+
+on:
+  push:
+    branches:
+      - main  # 你可以修改为你的默认分支
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Marp CLI
+        run: npm install -g @marp-team/marp-cli
+
+      - name: Build Marp Presentation
+        run: npx marp ./main.md --output build.html
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: marp-presentation
+          path: build.html
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Download Build Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: marp-presentation
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: build.html
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

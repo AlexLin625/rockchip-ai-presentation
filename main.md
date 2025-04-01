@@ -63,10 +63,10 @@ marp: true
 开发板的Spec如下
 
 - CPU : RK3568, 4x Cortex-A55 @ 2.0GHz (还行)
-- GPU : Mali-G52 (比较拉. OpenCL支持不太完善)
+- GPU : Mali-G52 (比较拉. OpenCL生态不太完善)
 - NPU: 1TOPS (int8) (还行)
   
-总结: 不想折腾Cross Compile的话, 直接板上编译也不会太慢。
+总结: 不想折腾交叉编译的话, 直接板上编译也不会太慢。
 
 ---
 
