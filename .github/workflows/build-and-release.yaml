@@ -5,6 +5,9 @@ on:
     branches:
       - main  # 你可以修改为你的默认分支
 
+    tags:
+      - "*"
+
 jobs:
   build:
     runs-on: ubuntu-latest
