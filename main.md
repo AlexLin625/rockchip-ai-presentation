@@ -10,6 +10,9 @@ marp: true
         width: 0.3em;
         height: 0.9em;
 
+        position: relative;
+        top: -0.1em;
+
         vertical-align: middle;
         margin: 0;
         padding: 0;
@@ -38,6 +41,7 @@ marp: true
 
         color: #343;
     }
+
 </style>
 
 # RK3568 正点原子开发板简介
@@ -135,7 +139,7 @@ https://github.com/airockchip/rknn-toolkit2
 - 模型转换工具
 - 示例工程
 
-`rknn-toolkit-lite` 是对C库的Python封装 ()，提供板上的Python 推理 API.
+`rknn-toolkit-lite` 是对C库的Python封装，提供板上的Python 推理 API.
 
 ---
 
