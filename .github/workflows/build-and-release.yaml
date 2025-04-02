@@ -2,9 +2,6 @@ name: Build and Release Marp Presentation
 
 on:
   push:
-    branches:
-      - main  # 你可以修改为你的默认分支
-
     tags:
       - "*"
 
