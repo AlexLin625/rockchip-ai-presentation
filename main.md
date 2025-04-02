@@ -90,7 +90,7 @@ marp: true
 
 文档有详细介绍。参考官方资料。
 
-实验室的板子有板载闪存，不自带SD卡也可以。
+实验室的板子有板载闪存，不自带SD卡也可以。整体流程类似刷机**线刷**。
 
 ### 插哪个口？
 
@@ -107,7 +107,7 @@ marp: true
 
 - github有前辈写的三方drcom认证客户端。可以自行编译 (获得软路由!).
 - 宿舍 / 教学区无线连接可以走旁路认证。`curl`任意`http`网页，弄到劫持的重定向链接即可。
-- 拿自己的电脑桥接。没必要。
+- 拿自己的电脑桥接: 需要你的电脑有两个网卡, 配置较麻烦。
 
 ---
 
@@ -135,7 +135,7 @@ https://github.com/airockchip/rknn-toolkit2
 - 模型转换工具
 - 示例工程
 
-`rknn-toolkit-lite` 是对C库的Python封装，提供板上的Python 推理 API.
+`rknn-toolkit-lite` 是对C库的Python封装 ()，提供板上的Python 推理 API.
 
 ---
 
