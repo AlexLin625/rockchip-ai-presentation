@@ -20,13 +20,13 @@ jobs:
         run: npm install -g @marp-team/marp-cli
 
       - name: Build Marp Presentation
-        run: npx marp ./main.md --output build.pdf
+        run: npx marp ./main.md --output build.html
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: marp-presentation
-          path: build.pdf
+          path: build.html
 
   release:
     needs: build
@@ -44,6 +44,6 @@ jobs:
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
-          files: build.pdf
+          files: build.html
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
